@@ -10,8 +10,8 @@ You can assume that there will be at most one pair of numbers summing up to the 
 
 
 ### Sample Input
-array=[3,5,-4,8,11,1,-1,6]
-targetSum=10
+- array=[3,5,-4,8,11,1,-1,6]
+- targetSum=10
 ### Sample Output
 [-1, 11] //the number could be in reverse order
 
@@ -54,7 +54,7 @@ def twoNumberSum(array, targetSum):
     pass
 ```
    - Time Complexity-- O(n) time --to search sum pair with target sum.
-   -  Space Complexity -- O(n) to create Hash map of size of arrray.
+   - Space Complexity -- O(n) to create Hash map of size of arrray.
     
 
  ## 🔥 Solution 3 (Python) -- Using Two Pointer Approach
@@ -76,6 +76,6 @@ def twoNumberSum(array, targetSum):
       pass
 ```
       
-    -Time Complexity-- O(nlog(n)) time for sorting
-    Space Complexity -- O(1) 
+    - Time Complexity-- O(nlog(n)) time for sorting
+     - Space Complexity -- O(1) 
 
