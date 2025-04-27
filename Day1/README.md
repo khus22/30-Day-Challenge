@@ -35,8 +35,8 @@ def twoNumberSum(array, targetSum):
         
     pass
 ```
-#time complexity - O(n^2)- 2 for loop 
-#Space complexity- O(1) - no space exra required.
+- time complexity - O(n^2)- 2 for loop
+- Space complexity- O(1) - no space exra required.
     
 ## 🔥 Solution 2 (Python) - using hash Map
 ```
@@ -53,14 +53,15 @@ def twoNumberSum(array, targetSum):
     
     pass
 ```
-    Time Complexity-- O(n) time --to search sum pair with target sum.
-    Space Complexity -- O(n) to create Hash map of size of arrray.
+   - Time Complexity-- O(n) time --to search sum pair with target sum.
+   -  Space Complexity -- O(n) to create Hash map of size of arrray.
     
 
  ## 🔥 Solution 3 (Python) -- Using Two Pointer Approach
-    ```
-    def twoNumberSum(array, targetSum):
-            array.sort()
+```
+def twoNumberSum(array, targetSum):
+    # Write your code here.
+    array.sort()
     left=0
     right=len(array)-1
     while left<right:
@@ -72,8 +73,9 @@ def twoNumberSum(array, targetSum):
         elif currentsum > targetSum:
             right -=1
     return []
-    ```
+      pass
+```
       
-    #Time Complexity-- O(nlog(n)) time for sorting
-    #Space Complexity -- O(1) 
+    -Time Complexity-- O(nlog(n)) time for sorting
+    Space Complexity -- O(1) 
 
