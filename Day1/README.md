@@ -17,13 +17,14 @@ targetSum=10
 
 
 ## 🧠 Approach
-- Brute force with two loops - Time complexity -- (O(n²))| Space Complexity -O(1) 
-- HashMap for optimized search (O(n)) - Time complexity -- (O(n))| Space Complexity - 
-- Two Pinter Approach (O(nlogn)) - Time complexity -- (O(nlogn))| Space Complexity - 
+- Brute force with two loops 
+- HashMap for optimized search 
+- Two Pinter Approach (O(nlogn)) 
 
 ## 🔥 Solution 1 (Python)--Brute Force
-```def twoNumberSum(array, targetSum):
-    # Write your code here.
+```
+def twoNumberSum(array, targetSum):
+     Write your code here.
     n= len(array)
     for i in range(n-1):
         for j in range(i+1,n):
@@ -38,7 +39,8 @@ targetSum=10
 #Space complexity- O(1) - no space exra required.
     
 ## 🔥 Solution 2 (Python) - using hash Map
-```def twoNumberSum(array, targetSum):
+```
+def twoNumberSum(array, targetSum):
     # Write your code here.
    nums={} ## Empty hash Map creation 
     for i in array:
@@ -56,7 +58,8 @@ targetSum=10
     
 
  ## 🔥 Solution 3 (Python) -- Using Two Pointer Approach
-    ```def twoNumberSum(array, targetSum):
+    ```
+    def twoNumberSum(array, targetSum):
             array.sort()
     left=0
     right=len(array)-1
