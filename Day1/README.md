@@ -19,7 +19,7 @@ You can assume that there will be at most one pair of numbers summing up to the 
 ## 🧠 Approach
 - Brute force with two loops 
 - HashMap for optimized search 
-- Two Pinter Approach (O(nlogn)) 
+- Two Pinter Approach 
 
 ## 🔥 Solution 1 (Python)--Brute Force
 ```
