@@ -38,7 +38,7 @@ def twoNumberSum(array, targetSum):
 - time complexity - O(n^2)- 2 for loop
 - Space complexity- O(1) - no space exra required.
     
-## 🔥 Solution 2 (Python) - using hash Map
+## 🔥 Solution 2 (Python) - using hash Map (Optimal solution for Non sorted aarray)
 ```
 def twoNumberSum(array, targetSum):
     # Write your code here.
@@ -53,8 +53,24 @@ def twoNumberSum(array, targetSum):
     
     pass
 ```
-   - Time Complexity-- O(n) time --to search sum pair with target sum.
-   - Space Complexity -- O(n) to create Hash map of size of arrray.
+```
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]: 
+        num_of_index={}   #map value:index
+        for i, num in enumerate(nums): #index and value(froma array)
+            required=target- num
+            if required in num_of_index:
+                return[num_of_index[required], i]
+            num_of_index[num]=i
+        return []
+```
+- self	Refers to the object itself when defining functions inside a class.
+- nums: list[int]	This says that nums is a parameter that should be a list of integers (example: [2, 7, 11, 15]).
+- target: int	This says that target is a parameter that should be a single integer (example: 9).
+- -> list[int]	This says the function will return a list of integers (example: [0, 1]).
+   
+- Time Complexity-- O(n) time --to search sum pair with target sum. 
+ - Space Complexity -- O(n) to create Hash map of size of arrray.
     
 
  ## 🔥 Solution 3 (Python) -- Using Two Pointer Approach
@@ -75,7 +91,31 @@ def twoNumberSum(array, targetSum):
     return []
       pass
 ```
+```
+def twoSum(self, nums: List[int], target: int) -> List[int]:
+        # Store numbers along with their original indices
+        nums_with_index = [(num, i) for i, num in enumerate(nums)]
+        
+        # Sort the list based on numbers
+        nums_with_index.sort()
+        
+        left = 0
+        right = len(nums_with_index) - 1
+        
+        while left < right:
+            current_sum = nums_with_index[left][0] + nums_with_index[right][0]  # 0 means number 
+            if current_sum == target:
+                return [nums_with_index[left][1], nums_with_index[right][1]]    #1 means indexe
+            elif current_sum < target:
+                left += 1
+            else:
+                right -= 1
+                
+        return []
+```
       
     - Time Complexity-- O(nlog(n)) time for sorting
-     - Space Complexity -- O(1) 
+     - Space Complexity -- O(1)
+
+     
 
